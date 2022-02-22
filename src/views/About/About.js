@@ -8,7 +8,7 @@ import SwiperTemplate from '../../templates/SwiperTemplate/SwiperTemplate';
 const About = () => {
   return (
     <SwiperTemplate>
-      <Sidebar />
+      <Sidebar viewTitle="few words 'bout me" />
       <Content>
         <SwiperSlide>
           <ContentDiv>

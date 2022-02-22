@@ -5,13 +5,20 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import SwiperTemplate from '../../templates/SwiperTemplate/SwiperTemplate';
 import { Content } from '../../components/Content/Content.styles';
 import { ContentDiv } from '../../components/ContentDiv/ContentDiv.styles';
-import { HeaderWrapper, HeroContent, ResumeButtonWrapper } from './Hero.styles';
+import {
+  // HeaderImage,
+  HeaderWrapper,
+  HeroContent,
+  ResumeButton,
+  ResumeWrapper,
+} from './Hero.styles';
 import { ReactComponent as DownloadIcon } from '../../assets/icons/download.svg';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
     <SwiperTemplate>
-      <Sidebar />
+      <Sidebar viewTitle='me, myself and I...' />
       <Content>
         <SwiperSlide>
           <ContentDiv>
@@ -45,12 +52,23 @@ const Hero = () => {
                 </li>
               </ul>
             </HeroContent>
-            <ResumeButtonWrapper>
-              <a href='/cv' download='CV_Piotr_Mól.pdf' target='_blank'>
+            <ResumeWrapper>
+              <ResumeButton
+                href='/cv'
+                download='CV_Piotr_Mól.pdf'
+                target='_blank'
+              >
                 <p>DOWNLOAD RESUME</p>
                 <DownloadIcon />
-              </a>
-            </ResumeButtonWrapper>
+              </ResumeButton>
+              <span>
+                ... or just look it up{' '}
+                <Link to='/CV_Piotr_Mól.pdf' target='_blank'>
+                  here
+                </Link>
+                .
+              </span>
+            </ResumeWrapper>
           </ContentDiv>
         </SwiperSlide>
       </Content>

@@ -8,7 +8,7 @@ import SwiperTemplate from '../../templates/SwiperTemplate/SwiperTemplate';
 const Contact = () => {
   return (
     <SwiperTemplate>
-      <Sidebar />
+      <Sidebar viewTitle="let's talk!" />
       <Content>
         <SwiperSlide>
           <ContentDiv>

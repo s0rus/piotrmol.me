@@ -8,7 +8,7 @@ import SwiperTemplate from '../../templates/SwiperTemplate/SwiperTemplate';
 const Works = () => {
   return (
     <SwiperTemplate>
-      <Sidebar />
+      <Sidebar viewTitle="stuff I've made thus far" />
       <Content>
         <SwiperSlide>
           <ContentDiv>

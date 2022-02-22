@@ -3,6 +3,7 @@ import { ReactComponent as UnstyledLogo } from '../../assets/icons/piotr-mol-log
 
 export const Wrapper = styled.aside`
   min-width: 100px;
+  max-width: 100px;
   margin: 0 16px;
 
   display: flex;
@@ -28,17 +29,23 @@ export const LogoWrapper = styled.div`
     align-items: center;
     justify-content: center;
 
-    svg {
-      transition: transform 0.2s ease-in-out;
+    svg g path {
+      transition: color 0.2s ease-in-out;
     }
 
     &:hover,
     &:focus {
       svg {
-        transform: scale(0.8);
+        color: ${({ theme }) => theme.colors.blue};
       }
     }
   }
+`;
+
+export const ViewTitle = styled.div`
+  margin-top: 8px;
+  text-align: justify;
+  font-family: 'Playfair Display', serif;
 `;
 
 export const SocialIcons = styled.div`

@@ -49,7 +49,8 @@ export const HeroContent = styled.div`
         font-size: clamp(16px, 1vw, 24px);
 
         span {
-          text-decoration: underline;
+          font-family: 'Playfair Display', serif;
+          font-weight: 900;
           color: ${({ theme }) => theme.colors.pink};
         }
       }
@@ -120,37 +121,58 @@ export const HeroContent = styled.div`
   }
 `;
 
-export const ResumeButtonWrapper = styled.div`
+export const ResumeWrapper = styled.div`
   height: 100%;
   padding: 32px 8px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-flow: column nowrap;
 
   background-color: ${({ theme }) => theme.colors.green};
   color: ${({ theme }) => theme.colors.white};
 
-  a {
-    padding: 24px;
+  span {
+    margin-top: 16px;
+    color: ${({ theme }) => theme.colors.blue};
+    font-size: clamp(16px, 1vw, 24px);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column nowrap;
+    a {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
 
-    font-family: 'Playfair Display', serif;
-    border-radius: 24px;
-    background-color: ${({ theme }) => theme.colors.blue};
+      transition: letter-spacing 0.2s ease-in-out;
 
-    transition: background-color 0.2s ease-in-out;
-
-    &:focus {
-      outline: 4px solid ${({ theme }) => theme.colors.pink};
+      &:hover,
+      &:focus,
+      &:active {
+        letter-spacing: 2px;
+      }
     }
+  }
+`;
 
-    &:hover {
-      background-color: ${({ theme }) => theme.colors.pink};
-    }
+export const ResumeButton = styled.a`
+  padding: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+
+  font-family: 'Playfair Display', serif;
+  border-radius: 24px;
+  background-color: ${({ theme }) => theme.colors.blue};
+  color: ${({ theme }) => theme.colors.white};
+
+  transition: background-color 0.2s ease-in-out;
+
+  &:focus {
+    outline: 4px solid ${({ theme }) => theme.colors.pink};
+  }
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.pink};
   }
 `;

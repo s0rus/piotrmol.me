@@ -17,8 +17,17 @@ export const Wrapper = styled.nav`
       line-height: 1.2;
 
       a {
+        font-family: 'Playfair Display', serif;
         font-size: clamp(64px, 5vw, 128px);
-        font-weight: 700;
+        font-weight: 900;
+
+        transition: letter-spacing 0.2s ease-in-out;
+
+        &:hover,
+        &:active,
+        &:focus {
+          letter-spacing: 4px;
+        }
       }
     }
   }
