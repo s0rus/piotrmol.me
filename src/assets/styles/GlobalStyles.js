@@ -43,17 +43,4 @@ export const GlobalStyles = createGlobalStyle`
     color: inherit;
   }
 
-  .swiper-scrollbar {
-    width: 20px;
-    height: 100%;
-    margin: 2em 0;
-
-    background-color: ${({ theme }) => theme.colors.blue};
-
-    .swiper-scrollbar-drag {
-      background-color: ${({ theme }) => theme.colors.pink};
-      border: 2px solid ${({ theme }) => theme.colors.blue};
-    }
-  }
-
 `;

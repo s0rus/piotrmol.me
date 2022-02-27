@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import GrainTexture from '../../assets/icons/grain-alternate.png';
+import GrainTexture from '../../assets/icons/grain-alternate.webp';
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -7,7 +7,19 @@ export const Wrapper = styled.div`
   padding: 2em 0;
 
   overflow: hidden;
-  background: url(${GrainTexture}) ${({ theme }) => theme.colors.darkPink};
+  background: url(${GrainTexture})
+    ${({ theme: { colors }, currentPathname }) => {
+      switch (currentPathname) {
+        case '/works':
+          return colors.blue;
+        case '/contact':
+          return colors.pink;
+        case '/about':
+          return colors.darkGrey;
+        default:
+          return colors.darkPink;
+      }
+    }};
   color: ${({ theme }) => theme.colors.white};
 `;
 

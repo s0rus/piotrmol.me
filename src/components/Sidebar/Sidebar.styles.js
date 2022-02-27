@@ -10,6 +10,19 @@ export const Wrapper = styled.aside`
   align-items: center;
   flex-flow: column nowrap;
   justify-content: space-between;
+
+  .swiper-scrollbar {
+    width: 20px;
+    height: 100%;
+    margin: 2em 0;
+
+    background-color: ${({ theme }) => theme.colors.blue};
+
+    .swiper-scrollbar-drag {
+      background-color: ${({ theme }) => theme.colors.pink};
+      border: 2px solid ${({ theme }) => theme.colors.blue};
+    }
+  }
 `;
 
 export const Logo = styled(UnstyledLogo)`
@@ -36,7 +49,8 @@ export const LogoWrapper = styled.div`
     &:hover,
     &:focus {
       svg {
-        color: ${({ theme }) => theme.colors.blue};
+        color: ${({ theme, isLight }) =>
+          isLight ? theme.colors.pink : theme.colors.blue};
       }
     }
   }
@@ -64,7 +78,8 @@ export const SocialIcons = styled.div`
     &:hover,
     &:focus {
       svg {
-        color: ${({ theme }) => theme.colors.blue};
+        color: ${({ theme, isLight }) =>
+          isLight ? theme.colors.pink : theme.colors.blue};};
       }
     }
   }

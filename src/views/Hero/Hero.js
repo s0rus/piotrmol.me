@@ -54,7 +54,7 @@ const Hero = () => {
             </HeroContent>
             <ResumeWrapper>
               <ResumeButton
-                href='/cv'
+                href='/CV_Piotr_Mól.pdf'
                 download='CV_Piotr_Mól.pdf'
                 target='_blank'
               >
@@ -62,9 +62,9 @@ const Hero = () => {
                 <DownloadIcon />
               </ResumeButton>
               <span>
-                ... or just look it up{' '}
+                ... or just{' '}
                 <Link to='/CV_Piotr_Mól.pdf' target='_blank'>
-                  here
+                  look it up
                 </Link>
                 .
               </span>

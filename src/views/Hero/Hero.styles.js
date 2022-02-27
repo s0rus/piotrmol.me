@@ -9,7 +9,7 @@ export const HeaderImage = styled.img`
   object-position: 50% 60%;
 `;
 
-export const HeaderWrapper = styled.div`
+export const HeaderWrapper = styled.header`
   width: 100%;
 
   background-color: ${({ theme }) => theme.colors.pink};
@@ -128,13 +128,13 @@ export const ResumeWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
 
   background-color: ${({ theme }) => theme.colors.green};
   color: ${({ theme }) => theme.colors.white};
 
   span {
-    margin-top: 16px;
+    margin-left: 16px;
     color: ${({ theme }) => theme.colors.blue};
     font-size: clamp(16px, 1vw, 24px);
 
@@ -145,8 +145,7 @@ export const ResumeWrapper = styled.div`
       transition: letter-spacing 0.2s ease-in-out;
 
       &:hover,
-      &:focus,
-      &:active {
+      &:focus {
         letter-spacing: 2px;
       }
     }
@@ -159,7 +158,7 @@ export const ResumeButton = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
 
   font-family: 'Playfair Display', serif;
   border-radius: 24px;
@@ -169,10 +168,15 @@ export const ResumeButton = styled.a`
   transition: background-color 0.2s ease-in-out;
 
   &:focus {
-    outline: 4px solid ${({ theme }) => theme.colors.pink};
+    outline: 2px solid ${({ theme }) => theme.colors.pink};
+    background-color: ${({ theme }) => theme.colors.pink};
   }
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.pink};
+  }
+
+  svg {
+    margin-left: 4px;
   }
 `;

@@ -17,8 +17,8 @@ const Root = () => {
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyles />
-      <ViewTemplate>
-        <Router>
+      <Router>
+        <ViewTemplate>
           <Routes>
             <Route exact path='/' element={<Hero />} />
             <Route exact path='/works' element={<Works />} />
@@ -26,8 +26,8 @@ const Root = () => {
             <Route exact path='/about' element={<About />} />
           </Routes>
           <Navigation />
-        </Router>
-      </ViewTemplate>
+        </ViewTemplate>
+      </Router>
     </ThemeProvider>
   );
 };

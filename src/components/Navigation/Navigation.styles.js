@@ -23,9 +23,7 @@ export const Wrapper = styled.nav`
 
         transition: letter-spacing 0.2s ease-in-out;
 
-        &:hover,
-        &:active,
-        &:focus {
+        &:hover {
           letter-spacing: 4px;
         }
       }
