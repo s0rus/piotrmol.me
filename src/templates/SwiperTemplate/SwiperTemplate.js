@@ -6,9 +6,12 @@ import { StyledSwiper } from './SwiperTemplate.styles';
 const SwiperTemplate = ({ children }) => {
   return (
     <StyledSwiper
+      watchSlidesProgress
       modules={[Scrollbar, Mousewheel]}
       direction={'vertical'}
       slidesPerView={'auto'}
+      centeredSlides={false}
+      loop={false}
       freeMode={{
         enabled: true,
         sticky: false,
@@ -20,6 +23,7 @@ const SwiperTemplate = ({ children }) => {
       }}
       mousewheel
       allowTouchMove={false}
+      resizeObserver={false}
     >
       {children}
     </StyledSwiper>

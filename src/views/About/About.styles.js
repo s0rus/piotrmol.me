@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Logo from '../../assets/icons/piotr-mol-logo.svg';
 
 export const HeaderWrapper = styled.header`
   width: 100%;
@@ -8,10 +7,6 @@ export const HeaderWrapper = styled.header`
 
   background-color: ${({ theme }) => theme.colors.pink};
   text-align: center;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   h2 {
     line-height: 1;
@@ -58,8 +53,15 @@ export const ContentSection = styled.div`
   }
 `;
 
-export const LogoBar = styled.div`
-  width: 100%;
-  padding: 16px;
-  background: url(${Logo});
+export const InstagramSection = styled.div`
+  margin-top: 2em;
+  padding: 16px 32px;
+
+  background-color: ${({ theme }) => theme.colors.pink};
+  color: ${({ theme }) => theme.colors.green};
+
+  p {
+    text-align: right;
+    margin: 0;
+  }
 `;

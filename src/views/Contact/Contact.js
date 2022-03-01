@@ -4,6 +4,7 @@ import { Content } from '../../components/Content/Content.styles';
 import { ContentDiv } from '../../components/ContentDiv/ContentDiv.styles';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import SwiperTemplate from '../../templates/SwiperTemplate/SwiperTemplate';
+import { ContactHeader } from './Contact.styles';
 
 const Contact = () => {
   return (
@@ -12,7 +13,9 @@ const Contact = () => {
       <Content>
         <SwiperSlide>
           <ContentDiv>
-            <h2>HELLO FROM CONTACT</h2>
+            <ContactHeader>
+              <h2>I will be more than willing to talk!</h2>
+            </ContactHeader>
           </ContentDiv>
         </SwiperSlide>
       </Content>

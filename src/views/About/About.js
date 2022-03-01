@@ -8,7 +8,7 @@ import {
   AboutContent,
   ContentSection,
   HeaderWrapper,
-  LogoBar,
+  InstagramSection,
 } from './About.styles';
 
 const About = () => {
@@ -60,6 +60,12 @@ const About = () => {
                   when I find the one I just have to watch it <span>ASAP</span>.
                 </p>
               </ContentSection>
+            </AboutContent>
+          </ContentDiv>
+        </SwiperSlide>
+        <SwiperSlide>
+          <ContentDiv>
+            <AboutContent>
               <ContentSection>
                 <h3>
                   <span>3</span>thingies;
@@ -74,9 +80,19 @@ const About = () => {
                   together your own keeb from various parts is something I will
                   get into <span>for sure</span>!
                 </p>
+
+                <InstagramSection>
+                  <p>BESIDES, YOU CAN CHECK MY INSTAGRAM</p>
+                  <a
+                    href='https://www.instagram.com/s0rus_'
+                    target='_blank'
+                    rel='noreferrer noopener'
+                  >
+                    instagram link placeholder
+                  </a>
+                </InstagramSection>
               </ContentSection>
             </AboutContent>
-            <LogoBar />
           </ContentDiv>
         </SwiperSlide>
       </Content>

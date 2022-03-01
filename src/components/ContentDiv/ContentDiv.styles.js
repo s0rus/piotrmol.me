@@ -6,7 +6,6 @@ export const ContentDiv = styled.div`
   margin-bottom: 1em;
 
   border: 2px solid ${({ theme }) => theme.colors.blue};
-  /* border-radius: 3px; */
   background-color: ${({ theme }) => theme.colors.blue};
 
   h2 {
