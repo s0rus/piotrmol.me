@@ -53,15 +53,49 @@ export const ContentSection = styled.div`
   }
 `;
 
-export const InstagramSection = styled.div`
-  margin-top: 2em;
-  padding: 16px 32px;
+export const SpotifyLink = styled.a`
+  display: block;
+  width: 100%;
+  height: 100%;
 
-  background-color: ${({ theme }) => theme.colors.pink};
-  color: ${({ theme }) => theme.colors.green};
+  color: ${({ theme }) => theme.colors.blue};
+  transition: color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: ${({ theme }) => theme.colors.pink};
+  }
+
+  ${ContentSection} {
+    margin-bottom: 0;
+  }
+`;
+
+export const SpotifySection = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 1em 2em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: ${({ theme }) => theme.colors.green};
+
+  div {
+    margin-left: 2em;
+  }
+
+  span {
+    color: inherit;
+  }
 
   p {
-    text-align: right;
     margin: 0;
+  }
+
+  svg {
+    width: clamp(48px, 5vw, 54px);
+    height: auto;
   }
 `;

@@ -8,8 +8,10 @@ import {
   AboutContent,
   ContentSection,
   HeaderWrapper,
-  InstagramSection,
+  SpotifyLink,
+  SpotifySection,
 } from './About.styles';
+import { ReactComponent as SpotifyLogo } from '../../assets/icons/spotify-logo.svg';
 
 const About = () => {
   return (
@@ -28,7 +30,7 @@ const About = () => {
             <AboutContent>
               <ContentSection>
                 <h3>
-                  <span>1</span>hello;
+                  <span>001</span>hello;
                 </h3>
                 <p>
                   My name is <span>Piotr Mól</span> and I really, really want to
@@ -42,7 +44,7 @@ const About = () => {
               </ContentSection>
               <ContentSection>
                 <h3>
-                  <span>2</span>hobbies;
+                  <span>002</span>hobbies;
                 </h3>
                 <p>
                   Definetely <span>coding</span> cool stuff that works and
@@ -60,18 +62,12 @@ const About = () => {
                   when I find the one I just have to watch it <span>ASAP</span>.
                 </p>
               </ContentSection>
-            </AboutContent>
-          </ContentDiv>
-        </SwiperSlide>
-        <SwiperSlide>
-          <ContentDiv>
-            <AboutContent>
               <ContentSection>
                 <h3>
-                  <span>3</span>thingies;
+                  <span>003</span>thingies;
                 </h3>
                 <p>
-                  One of the coolest things I want to take up in the future is{' '}
+                  Two of the coolest things I want to take up in the future is{' '}
                   <span>balisong flipping</span> and collecting cool knives.
                 </p>
                 <p>
@@ -80,19 +76,27 @@ const About = () => {
                   together your own keeb from various parts is something I will
                   get into <span>for sure</span>!
                 </p>
-
-                <InstagramSection>
-                  <p>BESIDES, YOU CAN CHECK MY INSTAGRAM</p>
-                  <a
-                    href='https://www.instagram.com/s0rus_'
-                    target='_blank'
-                    rel='noreferrer noopener'
-                  >
-                    instagram link placeholder
-                  </a>
-                </InstagramSection>
               </ContentSection>
             </AboutContent>
+          </ContentDiv>
+        </SwiperSlide>
+        <SwiperSlide>
+          <ContentDiv>
+            <SpotifyLink
+              href='https://open.spotify.com/playlist/4WUhBPulsN7tXl7dVe4P4w?si=64d283b4a1174357'
+              target='_blank'
+              rel='noreferrer noopener'
+            >
+              <ContentSection>
+                <SpotifySection>
+                  <SpotifyLogo />
+                  <div>
+                    <p>I listen to music constantly...</p>
+                    <span>so here&apos;s my playlist</span>
+                  </div>
+                </SpotifySection>
+              </ContentSection>
+            </SpotifyLink>
           </ContentDiv>
         </SwiperSlide>
       </Content>

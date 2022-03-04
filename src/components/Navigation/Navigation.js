@@ -1,20 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Footer, Wrapper } from './Navigation.styles';
+import { useLocation } from 'react-router-dom';
+import { Footer, SLink, Wrapper } from './Navigation.styles';
 
 const Navigation = () => {
+  const { pathname } = useLocation();
+
   return (
     <Wrapper>
       <div>
         <ul>
           <li>
-            <Link to='/works'>works</Link>
+            <SLink to='/works' currentpathname={pathname}>
+              works
+            </SLink>
           </li>
           <li>
-            <Link to='/contact'>contact</Link>
+            <SLink to='/contact' currentpathname={pathname}>
+              contact
+            </SLink>
           </li>
           <li>
-            <Link to='/about'>about</Link>
+            <SLink to='/about' currentpathname={pathname}>
+              about
+            </SLink>
           </li>
         </ul>
       </div>

@@ -4,6 +4,8 @@ import { Content } from '../../components/Content/Content.styles';
 import { ContentDiv } from '../../components/ContentDiv/ContentDiv.styles';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import SwiperTemplate from '../../templates/SwiperTemplate/SwiperTemplate';
+import { ContentSection, HeaderWrapper, WorksContent } from './Works.styles';
+import { ReactComponent as CodeLogo } from '../../assets/icons/code.svg';
 
 const Works = () => {
   return (
@@ -12,12 +14,17 @@ const Works = () => {
       <Content>
         <SwiperSlide>
           <ContentDiv>
-            <h2>Hello!</h2>
-            <h2>
-              My name is Piotr Mól and I am a web developer fascinated with
-              frontend and cool user experiences.
-            </h2>
-            <h2>Hello!</h2>
+            <HeaderWrapper>
+              <h2>WORKZ.</h2>
+              <CodeLogo />
+            </HeaderWrapper>
+            <WorksContent>
+              <ContentSection>
+                <h3>
+                  instakilogram<span>001</span>
+                </h3>
+              </ContentSection>
+            </WorksContent>
           </ContentDiv>
         </SwiperSlide>
       </Content>
