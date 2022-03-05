@@ -7,4 +7,8 @@ export const Theme = {
     darkGrey: '#1A1A1A',
     white: '#FAF9F6',
   },
+  fonts: {
+    main: '"Playfair Display", serif',
+    details: '"Poppins", sans-serif',
+  },
 };

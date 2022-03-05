@@ -7,7 +7,6 @@
       <g fill="currentColor">
         <path
           d="M0 38l19-19L0 0h38v38L0 76z"
-          transform="translate(-1123 -3101) translate(1123 3101)"
         ></path>
         <path
           d="M0 0h37.94L0 37.94z"
@@ -19,3 +18,4 @@
         ></path>
       </g>
 </svg>
+

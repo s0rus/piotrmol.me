@@ -4,15 +4,17 @@ export const GlobalStyles = createGlobalStyle`
 
   html {
     width: 100%;
-    height: 100%;
+    height: 100vh;
 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    color: ${({ theme }) => theme.colors.darkGrey};
+    font-family: ${({ theme: { fonts } }) => fonts.main};
+    font-size: 20px;
+    line-height: 1.45;
+    font-weight: 400;
+    color: ${({ theme }) => theme.colors.blue};
 
 
     -webkit-font-smoothing: antialiased;
@@ -36,11 +38,15 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  a, button, input, textarea {
+  a, button, input, textarea, ul, li {
     font-family: inherit;
     font-size: inherit;
     text-decoration: none;
     color: inherit;
+  }
+
+  ul {
+    list-style-type: none;
   }
 
 `;
