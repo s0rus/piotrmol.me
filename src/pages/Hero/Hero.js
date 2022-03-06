@@ -1,8 +1,16 @@
 import React from 'react';
-import { ContentTitle } from '../../components/ContentTitle/ContentTitle';
+import { Helmet } from 'react-helmet-async';
+import { Theme } from '../../assets/styles/Theme';
+import {
+  ContentTitle,
+  ContentTitleSubtext,
+} from '../../components/ContentTitle/ContentTitle';
 import { StyledLetter } from '../../components/StyledLetter/StyledLetter';
 import ContentTemplate from '../../templates/ContentTemplate/ContentTemplate';
 import {
+  AboutContainer,
+  AboutContentTitleWrapper,
+  AboutWrapper,
   ExternalLinks,
   HeroGraphic,
   HeroWrapper,
@@ -13,6 +21,9 @@ import {
 const Hero = () => {
   return (
     <ContentTemplate>
+      <Helmet>
+        <title>{Theme.titles.hero}</title>
+      </Helmet>
       <HeroWrapper>
         <LeftHeroContainer>
           <ContentTitle>
@@ -22,13 +33,11 @@ const Hero = () => {
               I&apos;m a web developer based in Laskowa, Poland. While being in
               love with React I&apos;m trying to master it.
             </strong>
-          </ContentTitle>
-          <div>
-            <p>
+            <ContentTitleSubtext>
               As of now I really want to take up a job as a(n) intern/junior. It
               would really help me grow and solidify my skills.
-            </p>
-          </div>
+            </ContentTitleSubtext>
+          </ContentTitle>
         </LeftHeroContainer>
         <RightHeroContainer>
           <HeroGraphic>
@@ -37,7 +46,7 @@ const Hero = () => {
             DEV.
           </HeroGraphic>
           <ExternalLinks>
-            <p>Find me</p>
+            <p>Find me:</p>
             <ul>
               <li>
                 <a
@@ -61,6 +70,25 @@ const Hero = () => {
           </ExternalLinks>
         </RightHeroContainer>
       </HeroWrapper>
+      <AboutWrapper>
+        <AboutContainer>
+          <h1>ABOUT.</h1>
+          <AboutContentTitleWrapper>
+            <ContentTitle>
+              <strong>
+                <StyledLetter>I</StyledLetter>
+                nterests are something that gives me motivation to keep going
+                and grow. I can zone myself from the world and do stuff that
+                fullfils me.
+              </strong>
+              <ContentTitleSubtext>
+                Some of the hobbies I&apos;m looking forward to getting into but
+                hey, everybody started somewhere.
+              </ContentTitleSubtext>
+            </ContentTitle>
+          </AboutContentTitleWrapper>
+        </AboutContainer>
+      </AboutWrapper>
     </ContentTemplate>
   );
 };

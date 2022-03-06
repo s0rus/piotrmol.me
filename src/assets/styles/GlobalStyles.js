@@ -45,6 +45,15 @@ export const GlobalStyles = createGlobalStyle`
     color: inherit;
   }
 
+  strong {
+    font-weight: 900;
+  }
+  
+  small {
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+
   ul {
     list-style-type: none;
   }

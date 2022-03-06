@@ -11,4 +11,10 @@ export const Theme = {
     main: '"Playfair Display", serif',
     details: '"Poppins", sans-serif',
   },
+  titles: {
+    hero: 'Piotr Mól | Hero',
+    works: 'Piotr Mól | Works',
+    contact: 'Piotr Mól | Contact',
+    notFound: 'Piotr Mól | Huh?',
+  },
 };

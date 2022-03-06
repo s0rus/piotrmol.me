@@ -63,7 +63,7 @@ export const Navigation = styled.nav`
       display: inline-block;
 
       &:last-child {
-        margin: 0 1rem 0 0.5rem;
+        margin: 0 0 0 0.5rem;
       }
     }
   }

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import GrainTexture from '../../assets/textures/grain-alternate.webp';
 
-export const HeroWrapper = styled.div`
+export const HeroWrapper = styled.section`
   width: 100%;
 
   display: flex;
@@ -50,4 +51,56 @@ export const HeroGraphic = styled.div`
   font-weight: bold;
   color: ${({ theme: { colors } }) => colors.white};
   font-family: ${({ theme: { fonts } }) => fonts.details};
+`;
+
+export const AboutWrapper = styled.section`
+  margin-top: 8rem;
+
+  /* background: url(${GrainTexture}) ${({ theme: { colors } }) =>
+    colors.darkPink}; */
+`;
+
+export const AboutContainer = styled.div`
+  padding-right: 2rem;
+
+  border-top: 3px solid ${({ theme: { colors } }) => colors.blue};
+  border-right: 3px solid ${({ theme: { colors } }) => colors.blue};
+
+  position: relative;
+  &::before,
+  &::after {
+    background-color: currentColor;
+
+    content: '';
+    position: absolute;
+  }
+
+  &::before {
+    width: 100%;
+    height: 2px;
+
+    top: 0.8rem;
+    left: 0;
+  }
+
+  &::after {
+    width: 2px;
+    height: 100%;
+
+    top: 0;
+    left: calc(100% - 0.8rem);
+  }
+
+  h1 {
+    font-size: 10rem;
+  }
+`;
+
+export const AboutContentTitleWrapper = styled.div`
+  padding: 0 4rem 6rem 0rem;
+
+  display: flex;
+  justify-content: flex-end;
+
+  /* background-color: red; */
 `;

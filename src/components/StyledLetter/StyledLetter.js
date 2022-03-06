@@ -6,9 +6,13 @@ export const StyledLetter = styled.span`
   justify-content: center;
   float: left;
 
+  min-width: 6rem;
+  min-height: 6rem;
+
   padding: 1rem 1.8rem;
   margin-right: 0.5rem;
   margin-top: 0.6rem;
+
   border: 3px solid ${({ theme: { colors } }) => colors.blue};
   font-weight: 900;
   font-size: 2.5rem;
