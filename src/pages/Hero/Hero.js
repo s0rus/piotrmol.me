@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Theme } from '../../assets/styles/Theme';
+import { BigContentTitle } from '../../components/BigContentTitle/BigContentTitle';
 import {
   ContentTitle,
   ContentTitleSubtext,
@@ -14,6 +15,7 @@ import {
   ExternalLinks,
   HeroGraphic,
   HeroWrapper,
+  InterestsWrapper,
   LeftHeroContainer,
   RightHeroContainer,
 } from './Hero.styles';
@@ -72,7 +74,7 @@ const Hero = () => {
       </HeroWrapper>
       <AboutWrapper>
         <AboutContainer>
-          <h1>ABOUT.</h1>
+          <BigContentTitle>ABOUT.</BigContentTitle>
           <AboutContentTitleWrapper>
             <ContentTitle>
               <strong>
@@ -87,6 +89,34 @@ const Hero = () => {
               </ContentTitleSubtext>
             </ContentTitle>
           </AboutContentTitleWrapper>
+          <InterestsWrapper>
+            <div>
+              <strong>Coding</strong>
+              <p>
+                Definetely coding cool stuff that works and serves some
+                particular purpose gives me a way to express myself - that is
+                really important for me.
+              </p>
+              <p>
+                Definetely coding cool stuff that works and serves some
+                particular purpose gives me a way to express myself - that is
+                really important for me.
+              </p>
+            </div>
+            <div>
+              <strong>Esport</strong>
+              <p>
+                Secondly, my favourite thing as of now is esport. I love people,
+                competition and overall vibes of this environment which is
+                growing really, and I mean really fast.
+              </p>
+              <p>
+                Secondly, my favourite thing as of now is esport. I love people,
+                competition and overall vibes of this environment which is
+                growing really, and I mean really fast.
+              </p>
+            </div>
+          </InterestsWrapper>
         </AboutContainer>
       </AboutWrapper>
     </ContentTemplate>

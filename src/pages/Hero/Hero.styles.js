@@ -90,17 +90,31 @@ export const AboutContainer = styled.div`
     top: 0;
     left: calc(100% - 0.8rem);
   }
-
-  h1 {
-    font-size: 10rem;
-  }
 `;
 
 export const AboutContentTitleWrapper = styled.div`
-  padding: 0 4rem 6rem 0rem;
+  padding: 0 4rem 4rem 0rem;
+`;
+
+export const InterestsWrapper = styled.div`
+  padding-bottom: 10rem;
+  margin: 0;
 
   display: flex;
   justify-content: flex-end;
 
-  /* background-color: red; */
+  max-width: 80ch;
+
+  div {
+    padding: 2rem;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      margin-top: 10rem;
+      padding-right: 0;
+    }
+  }
 `;
