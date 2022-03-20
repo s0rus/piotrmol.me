@@ -11,6 +11,18 @@ export const Theme = {
     main: '"Playfair Display", serif',
     details: '"Poppins", sans-serif',
   },
+  fontSizes: {
+    small: '0.8rem',
+    medium: '1rem',
+    large: '1.2rem',
+    xl: '4rem',
+    xxl: '15rem',
+  },
+  screenSizes: {
+    small: 'max-width: 876px',
+    medium: 'max-width: 1075px',
+    large: 'max-width: 1180px',
+  },
   titles: {
     hero: 'Piotr Mól | Hero',
     works: 'Piotr Mól | Works',

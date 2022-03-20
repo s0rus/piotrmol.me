@@ -4,6 +4,10 @@ import styled from 'styled-components';
 export const Wrapper = styled.header`
   width: 100%;
   padding: 2rem 2.5rem;
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
+    padding: 1rem;
+  }
 `;
 
 export const Container = styled.div`
@@ -14,8 +18,6 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  /* background-color: blue; */
 `;
 
 export const Logo = styled(Link)`
@@ -24,8 +26,6 @@ export const Logo = styled(Link)`
   justify-content: center;
 
   padding: 1rem 0.2rem;
-
-  /* background-color: red; */
 
   svg {
     width: 3rem;
@@ -59,12 +59,15 @@ export const Navigation = styled.nav`
 
   ul {
     li {
-      margin: 0 0.5rem 0 1rem;
       display: inline-block;
+    }
 
-      &:last-child {
-        margin: 0 0 0 0.5rem;
-      }
+    li:first-child {
+      margin: 0 0.5rem 0 1rem;
+    }
+
+    li:last-child {
+      margin: 0 0 0 0.5rem;
     }
   }
 `;

@@ -5,6 +5,11 @@ export const HeroWrapper = styled.section`
   padding-top: 4rem;
 
   display: flex;
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
+    flex-flow: column nowrap;
+    padding-top: 0;
+  }
 `;
 
 export const LeftHeroContainer = styled.div`
@@ -15,11 +20,17 @@ export const RightHeroContainer = styled.div`
   display: flex;
   justify-content: space-between;
   flex: 1;
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.medium}) {
+    justify-content: flex-end;
+  }
 `;
 
 export const ExternalLinks = styled.div`
   text-align: right;
   align-self: flex-end;
+
+  margin-left: 1rem;
 
   p {
     font-family: ${({ theme: { fonts } }) => fonts.details};
@@ -38,6 +49,10 @@ export const ExternalLinks = styled.div`
       }
     }
   }
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.medium}) {
+    display: none;
+  }
 `;
 
 export const HeroGraphic = styled.div`
@@ -51,6 +66,20 @@ export const HeroGraphic = styled.div`
   font-weight: bold;
   color: ${({ theme: { colors } }) => colors.white};
   font-family: ${({ theme: { fonts } }) => fonts.details};
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.large}) {
+    margin-left: 2rem;
+  }
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const AboutWrapper = styled.section`
@@ -97,7 +126,6 @@ export const AboutContentTitleWrapper = styled.div`
 `;
 
 export const InterestsWrapper = styled.div`
-  padding-bottom: 4rem;
   margin: 0;
 
   display: flex;

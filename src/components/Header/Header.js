@@ -29,7 +29,9 @@ const Header = () => {
             <li>
               <NavLink to='/works'>Works</NavLink>
             </li>
-            <span>—</span>
+            <li>
+              <span>—</span>
+            </li>
             <li>
               <NavLink to='/contact'>Contact</NavLink>
             </li>

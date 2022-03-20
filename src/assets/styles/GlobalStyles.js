@@ -16,9 +16,19 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     color: ${({ theme }) => theme.colors.blue};
 
+    overflow-x: hidden;
+
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    @media all and (${({ theme: { screenSizes } }) => screenSizes.large}) {
+      font-size: 18px;
+    }
+
+    @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
+      font-size: 16px;
+    }
   }
 
   *, *::before, *::after {
