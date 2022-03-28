@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { ReactComponent as LogoElement } from '../../assets/icons/piotr-mol-logo.svg';
 
 export const Wrapper = styled.header`
   width: 100%;
@@ -26,13 +27,18 @@ export const Logo = styled(Link)`
   justify-content: center;
 
   padding: 1rem 0.2rem;
+`;
 
-  svg {
-    width: 3rem;
-    height: auto;
-    margin-right: 0.5rem;
+export const PiotrMolLogo = styled(LogoElement)`
+  width: 3rem;
+  height: auto;
+  margin-right: 0.5rem;
 
-    align-self: flex-end;
+  align-self: flex-end;
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.mobileLarge}) {
+    width: 2.5rem;
+    margin-right: 0.3rem;
   }
 `;
 
@@ -46,12 +52,28 @@ export const PiotrMolInfo = styled.div`
 `;
 
 export const Name = styled.span`
-  font-size: 2.2rem;
+  font-size: ${({ theme: { fontSizes } }) => fontSizes.huge};
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.mobileLarge}) {
+    font-size: ${({ theme: { fontSizes } }) => fontSizes.large};
+  }
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.mobileMedium}) {
+    display: none;
+  }
 `;
 
 export const PageHeadline = styled.span`
   font-size: 0.9rem;
   font-weight: normal;
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.mobileLarge}) {
+    font-size: ${({ theme: { fontSizes } }) => fontSizes.small};
+  }
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.mobileMedium}) {
+    display: none;
+  }
 `;
 
 export const Navigation = styled.nav`
@@ -70,14 +92,38 @@ export const Navigation = styled.nav`
       margin: 0 0 0 0.5rem;
     }
   }
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.mobileSmall}) {
+    ul {
+      li {
+        font-size: ${({ theme: { fontSizes } }) => fontSizes.medium};
+      }
+
+      li:first-child {
+        margin: 0 0.2rem 0 0;
+      }
+
+      li:last-child {
+        margin: 0 0 0 0.2rem;
+      }
+    }
+  }
 `;
 
 export const NavLink = styled(Link)`
   font-weight: 700;
 
   transition: letter-spacing 0.2s ease-in-out;
-  &:hover,
-  &:focus {
+  &:hover {
     letter-spacing: 2px;
+  }
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.mobileLarge}) {
+    transition: none;
+
+    &:hover {
+      letter-spacing: normal;
+      text-decoration: underline;
+    }
   }
 `;

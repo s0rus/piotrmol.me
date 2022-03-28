@@ -15,6 +15,10 @@ export const Container = styled.div`
 
   display: flex;
   align-items: flex-start;
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.mobileLarge}) {
+    flex-flow: column nowrap;
+  }
 `;
 
 export const Content = styled.div`

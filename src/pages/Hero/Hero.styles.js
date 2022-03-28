@@ -115,6 +115,16 @@ export const AboutContainer = styled.div`
     top: 0;
     left: 0.4rem;
   }
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
+    border-left: none;
+    padding-left: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
 `;
 
 export const AboutContentTitleWrapper = styled.div`
@@ -133,6 +143,11 @@ export const InterestsWrapper = styled.div`
   align-items: flex-start;
 
   max-width: 80ch;
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
+    flex-flow: column nowrap;
+    max-width: 100%;
+  }
 `;
 
 export const InterestContent = styled.div`
@@ -159,12 +174,22 @@ export const InterestContent = styled.div`
   p {
     margin: 0.2rem 0;
   }
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
+    padding: 1rem 0;
+
+    &:first-child,
+    &:last-child {
+      padding-left: 0;
+      margin-top: 1rem;
+    }
+  }
 `;
 
 export const InterestGraphic = styled.div`
-  aspect-ratio: 4/3;
   margin-bottom: 0.5rem;
   padding: 0.5rem;
+  padding-bottom: 5rem;
 
   background-color: ${({ theme: { colors } }) => colors.blue};
 
@@ -225,11 +250,11 @@ export const InterestsFooter = styled.div`
   }
 
   ${InterestContent} {
+    padding-top: 0;
     margin-top: 0;
   }
 
   ${InterestGraphic} {
-    aspect-ratio: unset;
     padding-bottom: 5rem;
   }
 `;

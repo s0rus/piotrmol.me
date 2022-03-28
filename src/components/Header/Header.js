@@ -7,9 +7,9 @@ import {
   NavLink,
   PageHeadline,
   PiotrMolInfo,
+  PiotrMolLogo,
   Wrapper,
 } from './Header.styles';
-import { ReactComponent as PiotrMolLogo } from '../../assets/icons/piotr-mol-logo.svg';
 
 const Header = () => {
   return (
