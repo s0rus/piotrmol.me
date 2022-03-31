@@ -114,7 +114,8 @@ export const NavLink = styled(Link)`
   font-weight: 700;
 
   transition: letter-spacing 0.2s ease-in-out;
-  &:hover {
+  &:hover,
+  &:focus {
     letter-spacing: 2px;
   }
 

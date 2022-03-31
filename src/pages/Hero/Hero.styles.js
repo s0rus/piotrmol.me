@@ -84,6 +84,10 @@ export const HeroGraphic = styled.div`
 
 export const AboutWrapper = styled.section`
   margin-top: 4rem;
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
+    margin-top: 1rem;
+  }
 `;
 
 export const AboutContainer = styled.div`
@@ -233,6 +237,20 @@ export const InterestGraphic = styled.div`
     top: 0;
     left: 0.8rem;
   }
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
+    flex-flow: row nowrap;
+    padding-bottom: 0;
+    padding: 1rem 1rem 2rem 1rem;
+    justify-content: flex-end;
+
+    font-size: ${({ theme: { fontSizes } }) => fontSizes.huge};
+    overflow: hidden;
+  }
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.mobileMedium}) {
+    font-size: ${({ theme: { fontSizes } }) => fontSizes.large};
+  }
 `;
 
 export const InterestsFooter = styled.div`
@@ -256,5 +274,9 @@ export const InterestsFooter = styled.div`
 
   ${InterestGraphic} {
     padding-bottom: 5rem;
+
+    @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
+      padding: 1rem 1rem 2rem 1rem;
+    }
   }
 `;

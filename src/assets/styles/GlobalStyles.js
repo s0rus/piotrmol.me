@@ -29,12 +29,35 @@ export const GlobalStyles = createGlobalStyle`
     @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
       font-size: 16px;
     }
+
+    
   }
 
   *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+  }
+
+  *:focus {
+    outline: 2px dashed ${({ theme: { colors } }) => colors.green} !important;
+  }
+
+  ::selection {
+    background-color: ${({ theme: { colors } }) => colors.green};
+    color: ${({ theme: { colors } }) => colors.darkPink};
+    opacity: 0.9;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px; 
+    height: 10px; 
+  }
+  ::-webkit-scrollbar-thumb { 
+    background: ${({ theme: { colors } }) => colors.blue};
+  }
+  ::-webkit-scrollbar-track { 
+    background: ${({ theme: { colors } }) => colors.pink};
   }
 
   body {

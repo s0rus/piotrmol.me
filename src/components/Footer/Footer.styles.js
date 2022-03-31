@@ -18,7 +18,11 @@ export const Container = styled.div`
   }
 `;
 
-export const Content = styled.div``;
+export const Content = styled.div`
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.mobileLarge}) {
+    margin-bottom: 1rem;
+  }
+`;
 
 export const ContentSections = styled.div`
   display: grid;

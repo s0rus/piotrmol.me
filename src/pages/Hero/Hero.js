@@ -25,7 +25,6 @@ import {
   RightHeroContainer,
 } from './Hero.styles';
 
-// eslint-disable-next-line react/prop-types
 const Hero = () => {
   const [isFancy, toggleIsFancy] = useState(false);
 
@@ -39,10 +38,12 @@ const Hero = () => {
           <LeftHeroContainer>
             <ContentTitle>
               <strong>
-                <StyledLetter>H</StyledLetter>
-                ello! My name is Piotr <small>(or Peter in english)</small>.
-                I&apos;m a web developer based in Laskowa, Poland. While being
-                in love with React I&apos;m trying to master it.
+                <StyledLetter>H</StyledLetter>ello! My name is Piotr
+                <small>(or Peter in English)</small>. I&apos;m a web developer
+                based in Laskowa, Poland. While being in love with React,
+                I&apos;m trying to master it. As of now, I really want to take
+                up a job as a(n) intern/junior. It would really help me grow and
+                solidify my skills.
               </strong>
               <ContentTitleSubtext>
                 As of now I really want to take up a job as a(n) intern/junior.
@@ -92,10 +93,10 @@ const Hero = () => {
                   <StyledLetter>I</StyledLetter>
                   nterests are something that gives me motivation to keep going
                   and grow. I can zone myself from the world and do stuff that
-                  fullfils me.
+                  fulfills me.
                 </strong>
                 <ContentTitleSubtext>
-                  Some of the hobbies I&apos;m looking forward to getting into
+                  Some of the hobbies I&apos;m looking forward to getting into,
                   but hey, everybody started somewhere.
                 </ContentTitleSubtext>
               </ContentTitle>
@@ -110,7 +111,7 @@ const Hero = () => {
                 <strong>Coding</strong>
                 <p>
                   I just love to <small>click, click, click</small> to express
-                  my ideas and myself trough code and the feeling of seeing my
+                  my ideas and myself through code and the feeling of seeing my
                   idea come to life is something I can&apos;t cherish enough.
                 </p>
                 <p>
@@ -137,8 +138,8 @@ const Hero = () => {
                 </p>
                 <p>
                   I find it <small>delightful</small> to watch because there are
-                  some great personalities and crowd of passionate people makes
-                  it that much better.
+                  some great personalities and the crowd of passionate people
+                  makes it that much better.
                 </p>
                 <p>
                   Esport grows bigger and bigger every year and honestly after
@@ -146,7 +147,7 @@ const Hero = () => {
                   all of this progress is just so cool.
                 </p>
                 <p>
-                  Definetely my favourite to follow is{' '}
+                  Definitely my favourite to follow is{' '}
                   <FancyLink
                     href='https://lolesports.com/schedule?leagues=lec'
                     target='_blank'
@@ -173,11 +174,12 @@ const Hero = () => {
                 </p>
                 <p>
                   I want to get into flipping butterfly knives and make myself a
-                  sizible collection in the future. I don&apos;t really know why
-                  but it looks undeniably fun and hard to master in my view.
+                  sizable collection in the future. I don&apos;t really know
+                  why, but it looks undeniably fun and hard to master in my
+                  view.
                 </p>
                 <p>
-                  Also I would like to own a collection of cool looking
+                  Also, I would like to own a collection of cool looking
                   keyboards because the fact of collecting all the different
                   parts that are super hard to buy because of a high demand and
                   building your own keyboard seems truly interesting to me.
