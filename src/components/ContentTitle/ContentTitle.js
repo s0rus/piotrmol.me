@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContentTitle = styled.p`
-  max-width: 600px;
+  max-width: 40ch;
 
   font-size: 1.2rem;
   display: block;

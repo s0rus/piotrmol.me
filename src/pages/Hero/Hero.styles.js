@@ -185,7 +185,7 @@ export const InterestContent = styled.div`
     &:first-child,
     &:last-child {
       padding-left: 0;
-      margin-top: 1rem;
+      margin-top: 0;
     }
   }
 `;
@@ -278,5 +278,9 @@ export const InterestsFooter = styled.div`
     @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
       padding: 1rem 1rem 2rem 1rem;
     }
+  }
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
+    padding: 1rem 0;
   }
 `;

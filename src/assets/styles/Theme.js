@@ -33,4 +33,9 @@ export const Theme = {
     contact: 'Piotr Mól | Contact',
     notFound: 'Piotr Mól | Huh?',
   },
+  headerTitles: {
+    hero: 'me, myself and I...',
+    works: "stuff I've made thus far",
+    contact: "let's talk!",
+  },
 };

@@ -10,8 +10,21 @@ import {
   PiotrMolLogo,
   Wrapper,
 } from './Header.styles';
+import { Theme } from '../../assets/styles/Theme';
+import { useLocation } from 'react-router-dom';
 
 const Header = () => {
+  const { pathname } = useLocation();
+
+  const getHeaderTitle = () => {
+    switch (pathname) {
+      case '/works':
+        return Theme.headerTitles.works;
+      default:
+        return Theme.headerTitles.hero;
+    }
+  };
+
   return (
     <Wrapper>
       <Container>
@@ -20,20 +33,20 @@ const Header = () => {
           <PiotrMolInfo>
             <h1>
               <Name>Piotr Mól</Name>
-              <PageHeadline>me, myself and I...</PageHeadline>
+              <PageHeadline>{getHeaderTitle()}</PageHeadline>
             </h1>
           </PiotrMolInfo>
         </Logo>
         <Navigation>
           <ul>
             <li>
-              <NavLink to='/works'>Works</NavLink>
+              <NavLink to='/works'>works</NavLink>
             </li>
             <li>
               <span>—</span>
             </li>
             <li>
-              <NavLink to='/contact'>Contact</NavLink>
+              <NavLink to='/contact'>contact</NavLink>
             </li>
           </ul>
         </Navigation>
