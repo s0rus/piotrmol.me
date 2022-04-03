@@ -91,9 +91,13 @@ export const AboutWrapper = styled.section`
 `;
 
 export const AboutContainer = styled.div`
-  padding-left: 2rem;
+  padding: ${({ isInverted }) => (isInverted ? '0 2rem 0 0' : '0 0 0 2rem')};
 
-  border-left: 3px solid ${({ theme: { colors } }) => colors.blue};
+  border-left: ${({ isInverted, theme: { colors } }) =>
+    !isInverted && `3px solid ${colors.blue}`};
+
+  border-right: ${({ isInverted, theme: { colors } }) =>
+    isInverted && `3px solid ${colors.blue}`};
 
   position: relative;
   &::before,
@@ -109,7 +113,8 @@ export const AboutContainer = styled.div`
     height: 2rem;
 
     top: -2rem;
-    left: -0.75rem;
+    left: ${({ isInverted }) =>
+      isInverted ? 'calc(100% - 1.2rem)' : '-0.75rem'};
   }
 
   &::after {
@@ -117,12 +122,13 @@ export const AboutContainer = styled.div`
     height: 100%;
 
     top: 0;
-    left: 0.4rem;
+    left: ${({ isInverted }) =>
+      isInverted ? 'calc(100% - 0.4rem)' : '0.4rem'};
   }
 
   @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
-    border-left: none;
-    padding-left: 0;
+    border: none;
+    padding: 0;
 
     &::before,
     &::after {
@@ -283,4 +289,12 @@ export const InterestsFooter = styled.div`
   @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
     padding: 1rem 0;
   }
+`;
+
+export const SkillsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
 `;

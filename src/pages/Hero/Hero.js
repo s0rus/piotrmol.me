@@ -23,7 +23,10 @@ import {
   InterestsWrapper,
   LeftHeroContainer,
   RightHeroContainer,
+  SkillsGrid,
 } from './Hero.styles';
+
+import { ReactComponent as ReactLogo } from '../../assets/icons/react-logo.svg';
 
 const Hero = () => {
   const [isFancy, toggleIsFancy] = useState(false);
@@ -198,6 +201,40 @@ const Hero = () => {
                 </p>
               </InterestContent>
             </InterestsFooter>
+          </AboutContainer>
+          <BigContentTitle isInverted>SKILLS</BigContentTitle>
+          <AboutContainer isInverted>
+            <AboutContentTitleWrapper>
+              <ContentTitle>
+                <strong>
+                  <StyledLetter>I</StyledLetter>
+                  nterests are something that gives me motivation to keep going
+                  and grow. I can zone myself from the world and do stuff that
+                  fulfills me.
+                </strong>
+                <ContentTitleSubtext>
+                  Some of the hobbies I&apos;m looking forward to getting into,
+                  but hey, everybody started somewhere.
+                </ContentTitleSubtext>
+              </ContentTitle>
+            </AboutContentTitleWrapper>
+            <SkillsGrid>
+              <div>
+                <ReactLogo />
+              </div>
+              <div>
+                <ReactLogo />
+              </div>
+              <div>
+                <ReactLogo />
+              </div>
+              <div>
+                <ReactLogo />
+              </div>
+              <div>
+                <ReactLogo />
+              </div>
+            </SkillsGrid>
           </AboutContainer>
         </AboutWrapper>
       </ContentTemplate>
