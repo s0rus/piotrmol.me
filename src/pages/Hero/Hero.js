@@ -26,7 +26,13 @@ import {
   SkillsGrid,
 } from './Hero.styles';
 
+import { ReactComponent as JavascriptLogo } from '../../assets/icons/javascript-logo.svg';
 import { ReactComponent as ReactLogo } from '../../assets/icons/react-logo.svg';
+import { ReactComponent as CssLogo } from '../../assets/icons/css-logo.svg';
+import { ReactComponent as ReactRouterLogo } from '../../assets/icons/reactrouter-logo.svg';
+import { ReactComponent as FirebaseLogo } from '../../assets/icons/firebase-logo.svg';
+import { ReactComponent as GitLogo } from '../../assets/icons/git-logo.svg';
+import { ReactComponent as TerminalLogo } from '../../assets/icons/terminal-logo.svg';
 
 const Hero = () => {
   const [isFancy, toggleIsFancy] = useState(false);
@@ -219,21 +225,32 @@ const Hero = () => {
               </ContentTitle>
             </AboutContentTitleWrapper>
             <SkillsGrid>
-              <div>
-                <ReactLogo />
-              </div>
-              <div>
-                <ReactLogo />
-              </div>
-              <div>
-                <ReactLogo />
-              </div>
-              <div>
-                <ReactLogo />
-              </div>
-              <div>
-                <ReactLogo />
-              </div>
+              <section>
+                <div>
+                  <JavascriptLogo />
+                </div>
+                <div>
+                  <ReactLogo />
+                </div>
+                <div>
+                  <CssLogo />
+                </div>
+                <div>
+                  <ReactRouterLogo />
+                </div>
+                <div>
+                  <FirebaseLogo />
+                </div>
+                <div>
+                  <GitLogo />
+                </div>
+                <div>
+                  <TerminalLogo />
+                </div>
+              </section>
+              <article>
+                <h2>Lorem ipsum</h2>
+              </article>
             </SkillsGrid>
           </AboutContainer>
         </AboutWrapper>

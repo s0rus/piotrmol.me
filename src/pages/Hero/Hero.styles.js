@@ -292,9 +292,15 @@ export const InterestsFooter = styled.div`
 `;
 
 export const SkillsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+
+  section {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+  }
 `;
