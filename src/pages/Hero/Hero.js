@@ -15,6 +15,7 @@ import {
   AboutContentTitleWrapper,
   AboutWrapper,
   ExternalLinks,
+  GridItem,
   HeroGraphic,
   HeroWrapper,
   InterestContent,
@@ -22,8 +23,11 @@ import {
   InterestsFooter,
   InterestsWrapper,
   LeftHeroContainer,
+  LeftSkillsContainer,
   RightHeroContainer,
+  RightSkillsContainer,
   SkillsGrid,
+  SkillsWrapper,
 } from './Hero.styles';
 
 import { ReactComponent as JavascriptLogo } from '../../assets/icons/javascript-logo.svg';
@@ -213,45 +217,56 @@ const Hero = () => {
             <AboutContentTitleWrapper>
               <ContentTitle>
                 <strong>
-                  <StyledLetter>I</StyledLetter>
-                  nterests are something that gives me motivation to keep going
-                  and grow. I can zone myself from the world and do stuff that
-                  fulfills me.
+                  <StyledLetter>T</StyledLetter>
+                  oolbox of a web developer is their greatest power. The more
+                  technologies you know, the more versitility you can bring to
+                  the table.
                 </strong>
                 <ContentTitleSubtext>
-                  Some of the hobbies I&apos;m looking forward to getting into,
-                  but hey, everybody started somewhere.
+                  I constantly strive to expand this box of things I know,
+                  it&apos;s hard as new and potentially better tech pops up here
+                  and there, but what is left for me to just try to keep up and
+                  aim for being the best version of myself.
                 </ContentTitleSubtext>
               </ContentTitle>
             </AboutContentTitleWrapper>
-            <SkillsGrid>
-              <section>
-                <div>
-                  <JavascriptLogo />
-                </div>
-                <div>
-                  <ReactLogo />
-                </div>
-                <div>
-                  <CssLogo />
-                </div>
-                <div>
-                  <ReactRouterLogo />
-                </div>
-                <div>
-                  <FirebaseLogo />
-                </div>
-                <div>
-                  <GitLogo />
-                </div>
-                <div>
-                  <TerminalLogo />
-                </div>
-              </section>
-              <article>
-                <h2>Lorem ipsum</h2>
-              </article>
-            </SkillsGrid>
+            <SkillsWrapper>
+              <LeftSkillsContainer>
+                <strong>Techstack</strong>
+                <SkillsGrid>
+                  <GridItem>
+                    <JavascriptLogo />
+                  </GridItem>
+                  <GridItem>
+                    <ReactLogo />
+                  </GridItem>
+                  <GridItem>
+                    <CssLogo />
+                  </GridItem>
+                  <GridItem>
+                    <ReactRouterLogo />
+                  </GridItem>
+                  <GridItem>
+                    <FirebaseLogo />
+                  </GridItem>
+                  <GridItem>
+                    <GitLogo />
+                  </GridItem>
+                  <GridItem>
+                    <TerminalLogo />
+                  </GridItem>
+                </SkillsGrid>
+              </LeftSkillsContainer>
+              <RightSkillsContainer>
+                <strong>Getting there</strong>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                  sit atque, fuga similique sequi incidunt fugiat nihil, quam
+                  asperiores culpa sapiente iusto enim laboriosam aliquid porro
+                  sunt. Cumque, sit officia.
+                </p>
+              </RightSkillsContainer>
+            </SkillsWrapper>
           </AboutContainer>
         </AboutWrapper>
       </ContentTemplate>

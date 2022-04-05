@@ -291,16 +291,40 @@ export const InterestsFooter = styled.div`
   }
 `;
 
-export const SkillsGrid = styled.div`
+export const SkillsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
 
-  section {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    grid-column-gap: 1rem;
-    grid-row-gap: 1rem;
+  padding-bottom: 5rem;
+
+  strong {
+    display: block;
+    font-size: ${({ theme: { fontSizes } }) => fontSizes.huge};
+    padding-bottom: 0.5rem;
+  }
+`;
+
+export const LeftSkillsContainer = styled.div`
+  flex: 1;
+`;
+
+export const RightSkillsContainer = styled.div`
+  flex: 1;
+  margin-top: 8rem;
+`;
+
+export const SkillsGrid = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  /* grid-column-gap: 1rem; */
+  grid-row-gap: 1rem;
+`;
+
+export const GridItem = styled.li`
+  display: flex;
+  svg {
+    width: 50%;
+    height: auto;
   }
 `;
