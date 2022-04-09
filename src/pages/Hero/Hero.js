@@ -37,6 +37,7 @@ import { ReactComponent as ReactRouterLogo } from '../../assets/icons/reactroute
 import { ReactComponent as FirebaseLogo } from '../../assets/icons/firebase-logo.svg';
 import { ReactComponent as GitLogo } from '../../assets/icons/git-logo.svg';
 import { ReactComponent as TerminalLogo } from '../../assets/icons/terminal-logo.svg';
+import { ReactComponent as SassLogo } from '../../assets/icons/sass-logo.svg';
 
 const Hero = () => {
   const [isFancy, toggleIsFancy] = useState(false);
@@ -54,9 +55,7 @@ const Hero = () => {
                 <StyledLetter>H</StyledLetter>ello! My name is Piotr
                 <small>(or Peter in English)</small>. I&apos;m a web developer
                 based in Laskowa, Poland. While being in love with React,
-                I&apos;m trying to master it. As of now, I really want to take
-                up a job as a(n) intern/junior. It would really help me grow and
-                solidify my skills.
+                I&apos;m trying to master it.
               </strong>
               <ContentTitleSubtext>
                 As of now I really want to take up a job as a(n) intern/junior.
@@ -98,6 +97,71 @@ const Hero = () => {
           </RightHeroContainer>
         </HeroWrapper>
         <AboutWrapper>
+          <BigContentTitle isInverted>PROWESS</BigContentTitle>
+          <AboutContainer isInverted>
+            <AboutContentTitleWrapper>
+              <ContentTitle>
+                <strong>
+                  <StyledLetter>T</StyledLetter>
+                  oolbox of a web developer is their greatest power. The more
+                  technologies you know, the more versitility you can bring to
+                  the table.
+                </strong>
+                <ContentTitleSubtext>
+                  I constantly strive to expand this box of things I know,
+                  it&apos;s hard as new and potentially better tech pops up here
+                  and there, but what is left for me to just try to keep up and
+                  aim for being the best version of myself.
+                </ContentTitleSubtext>
+              </ContentTitle>
+            </AboutContentTitleWrapper>
+            <SkillsWrapper>
+              <LeftSkillsContainer>
+                <strong>Techstack</strong>
+                <SkillsGrid>
+                  <GridItem>
+                    <JavascriptLogo />
+                  </GridItem>
+                  <GridItem>
+                    <ReactLogo />
+                  </GridItem>
+                  <GridItem>
+                    <CssLogo />
+                  </GridItem>
+                  <GridItem>
+                    <ReactRouterLogo />
+                  </GridItem>
+                  <GridItem>
+                    <FirebaseLogo />
+                  </GridItem>
+                  <GridItem>
+                    <GitLogo />
+                  </GridItem>
+                  <GridItem>
+                    <TerminalLogo />
+                  </GridItem>
+                  <GridItem>
+                    <SassLogo />
+                  </GridItem>
+                </SkillsGrid>
+              </LeftSkillsContainer>
+              <RightSkillsContainer>
+                <strong>Getting there</strong>
+                <p>To level up myself I try to learn constantly:</p>
+                <ul>
+                  <li>
+                    <b>The Odin Project</b> - DONE
+                  </li>
+                  <li>
+                    <b>React - The complete guide</b> - IN PROGRESS
+                  </li>
+                  <li>
+                    <b>The Complete React Native</b> - IN PROGRESS
+                  </li>
+                </ul>
+              </RightSkillsContainer>
+            </SkillsWrapper>
+          </AboutContainer>
           <BigContentTitle>ABOUT</BigContentTitle>
           <AboutContainer>
             <AboutContentTitleWrapper>
@@ -211,62 +275,6 @@ const Hero = () => {
                 </p>
               </InterestContent>
             </InterestsFooter>
-          </AboutContainer>
-          <BigContentTitle isInverted>SKILLS</BigContentTitle>
-          <AboutContainer isInverted>
-            <AboutContentTitleWrapper>
-              <ContentTitle>
-                <strong>
-                  <StyledLetter>T</StyledLetter>
-                  oolbox of a web developer is their greatest power. The more
-                  technologies you know, the more versitility you can bring to
-                  the table.
-                </strong>
-                <ContentTitleSubtext>
-                  I constantly strive to expand this box of things I know,
-                  it&apos;s hard as new and potentially better tech pops up here
-                  and there, but what is left for me to just try to keep up and
-                  aim for being the best version of myself.
-                </ContentTitleSubtext>
-              </ContentTitle>
-            </AboutContentTitleWrapper>
-            <SkillsWrapper>
-              <LeftSkillsContainer>
-                <strong>Techstack</strong>
-                <SkillsGrid>
-                  <GridItem>
-                    <JavascriptLogo />
-                  </GridItem>
-                  <GridItem>
-                    <ReactLogo />
-                  </GridItem>
-                  <GridItem>
-                    <CssLogo />
-                  </GridItem>
-                  <GridItem>
-                    <ReactRouterLogo />
-                  </GridItem>
-                  <GridItem>
-                    <FirebaseLogo />
-                  </GridItem>
-                  <GridItem>
-                    <GitLogo />
-                  </GridItem>
-                  <GridItem>
-                    <TerminalLogo />
-                  </GridItem>
-                </SkillsGrid>
-              </LeftSkillsContainer>
-              <RightSkillsContainer>
-                <strong>Getting there</strong>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                  sit atque, fuga similique sequi incidunt fugiat nihil, quam
-                  asperiores culpa sapiente iusto enim laboriosam aliquid porro
-                  sunt. Cumque, sit officia.
-                </p>
-              </RightSkillsContainer>
-            </SkillsWrapper>
           </AboutContainer>
         </AboutWrapper>
       </ContentTemplate>

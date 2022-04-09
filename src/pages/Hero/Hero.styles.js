@@ -302,6 +302,10 @@ export const SkillsWrapper = styled.div`
     font-size: ${({ theme: { fontSizes } }) => fontSizes.huge};
     padding-bottom: 0.5rem;
   }
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
+    flex-flow: column nowrap;
+  }
 `;
 
 export const LeftSkillsContainer = styled.div`
@@ -311,6 +315,10 @@ export const LeftSkillsContainer = styled.div`
 export const RightSkillsContainer = styled.div`
   flex: 1;
   margin-top: 8rem;
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
+    margin-top: 2rem;
+  }
 `;
 
 export const SkillsGrid = styled.ul`
@@ -319,10 +327,16 @@ export const SkillsGrid = styled.ul`
   grid-template-rows: auto;
   /* grid-column-gap: 1rem; */
   grid-row-gap: 1rem;
+
+  @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `;
 
 export const GridItem = styled.li`
   display: flex;
+  align-items: center;
+
   svg {
     width: 50%;
     height: auto;
