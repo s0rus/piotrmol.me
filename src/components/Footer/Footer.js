@@ -37,7 +37,7 @@ const Footer = () => {
               </LinkList>
             </Content>
             <Content>
-              <ContentHeader>Direct Contact</ContentHeader>
+              <ContentHeader>Contact</ContentHeader>
               <LinkList>
                 <li>
                   <a

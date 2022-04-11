@@ -5,17 +5,15 @@ import { BigContentTitle } from '../../components/BigContentTitle/BigContentTitl
 import {
   ContentTitle,
   ContentTitleSubtext,
+  ContentTitleWrapper,
 } from '../../components/ContentTitle/ContentTitle';
 import Cursor from '../../components/Cursor/Cursor';
 import FancyLink from '../../components/FancyLink/FancyLink';
+import SkillsGrid from '../../components/SkillsGrid/SkillsGrid';
 import { StyledLetter } from '../../components/StyledLetter/StyledLetter';
 import ContentTemplate from '../../templates/ContentTemplate/ContentTemplate';
 import {
-  AboutContainer,
-  AboutContentTitleWrapper,
-  AboutWrapper,
   ExternalLinks,
-  GridItem,
   HeroGraphic,
   HeroWrapper,
   InterestContent,
@@ -26,18 +24,10 @@ import {
   LeftSkillsContainer,
   RightHeroContainer,
   RightSkillsContainer,
-  SkillsGrid,
+  SectionContent,
+  SectionWrapper,
   SkillsWrapper,
 } from './Hero.styles';
-
-import { ReactComponent as JavascriptLogo } from '../../assets/icons/javascript-logo.svg';
-import { ReactComponent as ReactLogo } from '../../assets/icons/react-logo.svg';
-import { ReactComponent as CssLogo } from '../../assets/icons/css-logo.svg';
-import { ReactComponent as ReactRouterLogo } from '../../assets/icons/reactrouter-logo.svg';
-import { ReactComponent as FirebaseLogo } from '../../assets/icons/firebase-logo.svg';
-import { ReactComponent as GitLogo } from '../../assets/icons/git-logo.svg';
-import { ReactComponent as TerminalLogo } from '../../assets/icons/terminal-logo.svg';
-import { ReactComponent as SassLogo } from '../../assets/icons/sass-logo.svg';
 
 const Hero = () => {
   const [isFancy, toggleIsFancy] = useState(false);
@@ -50,18 +40,21 @@ const Hero = () => {
         </Helmet>
         <HeroWrapper>
           <LeftHeroContainer>
-            <ContentTitle>
-              <strong>
-                <StyledLetter>H</StyledLetter>ello! My name is Piotr
-                <small>(or Peter in English)</small>. I&apos;m a web developer
-                based in Laskowa, Poland. While being in love with React,
-                I&apos;m trying to master it.
-              </strong>
-              <ContentTitleSubtext>
-                As of now I really want to take up a job as a(n) intern/junior.
-                It would really help me grow and solidify my skills.
-              </ContentTitleSubtext>
-            </ContentTitle>
+            <ContentTitleWrapper>
+              <ContentTitle>
+                <strong>
+                  <StyledLetter>H</StyledLetter>ello! My name is Piotr
+                  <small> (or Peter in English)</small>. I&apos;m a web
+                  developer based in Laskowa, Poland. While being in love with
+                  React, I&apos;m trying to master it.
+                </strong>
+                <ContentTitleSubtext>
+                  As of now I really want to take up a job as a(n)
+                  intern/junior. It would really help me grow and solidify my
+                  skills.
+                </ContentTitleSubtext>
+              </ContentTitle>
+            </ContentTitleWrapper>
           </LeftHeroContainer>
           <RightHeroContainer>
             <HeroGraphic>
@@ -96,10 +89,10 @@ const Hero = () => {
             </ExternalLinks>
           </RightHeroContainer>
         </HeroWrapper>
-        <AboutWrapper>
+        <SectionWrapper>
           <BigContentTitle isInverted>PROWESS</BigContentTitle>
-          <AboutContainer isInverted>
-            <AboutContentTitleWrapper>
+          <SectionContent isInverted>
+            <ContentTitleWrapper>
               <ContentTitle>
                 <strong>
                   <StyledLetter>T</StyledLetter>
@@ -114,36 +107,11 @@ const Hero = () => {
                   aim for being the best version of myself.
                 </ContentTitleSubtext>
               </ContentTitle>
-            </AboutContentTitleWrapper>
+            </ContentTitleWrapper>
             <SkillsWrapper>
               <LeftSkillsContainer>
                 <strong>Techstack</strong>
-                <SkillsGrid>
-                  <GridItem>
-                    <JavascriptLogo />
-                  </GridItem>
-                  <GridItem>
-                    <ReactLogo />
-                  </GridItem>
-                  <GridItem>
-                    <CssLogo />
-                  </GridItem>
-                  <GridItem>
-                    <ReactRouterLogo />
-                  </GridItem>
-                  <GridItem>
-                    <FirebaseLogo />
-                  </GridItem>
-                  <GridItem>
-                    <GitLogo />
-                  </GridItem>
-                  <GridItem>
-                    <TerminalLogo />
-                  </GridItem>
-                  <GridItem>
-                    <SassLogo />
-                  </GridItem>
-                </SkillsGrid>
+                <SkillsGrid />
               </LeftSkillsContainer>
               <RightSkillsContainer>
                 <strong>Getting there</strong>
@@ -161,10 +129,12 @@ const Hero = () => {
                 </ul>
               </RightSkillsContainer>
             </SkillsWrapper>
-          </AboutContainer>
+          </SectionContent>
+        </SectionWrapper>
+        <SectionWrapper>
           <BigContentTitle>ABOUT</BigContentTitle>
-          <AboutContainer>
-            <AboutContentTitleWrapper>
+          <SectionContent>
+            <ContentTitleWrapper isInverted>
               <ContentTitle>
                 <strong>
                   <StyledLetter>I</StyledLetter>
@@ -177,7 +147,7 @@ const Hero = () => {
                   but hey, everybody started somewhere.
                 </ContentTitleSubtext>
               </ContentTitle>
-            </AboutContentTitleWrapper>
+            </ContentTitleWrapper>
             <InterestsWrapper>
               <InterestContent>
                 <InterestGraphic>
@@ -275,8 +245,8 @@ const Hero = () => {
                 </p>
               </InterestContent>
             </InterestsFooter>
-          </AboutContainer>
-        </AboutWrapper>
+          </SectionContent>
+        </SectionWrapper>
       </ContentTemplate>
       <Cursor isFancy={isFancy} />
     </>

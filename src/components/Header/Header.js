@@ -46,7 +46,9 @@ const Header = () => {
               <span>—</span>
             </li>
             <li>
-              <NavLink to='/contact'>contact</NavLink>
+              <NavLink as='a' href='mailto:piotrmolkontakt@gmail.com'>
+                contact
+              </NavLink>
             </li>
           </ul>
         </Navigation>

@@ -82,7 +82,7 @@ export const HeroGraphic = styled.div`
   }
 `;
 
-export const AboutWrapper = styled.section`
+export const SectionWrapper = styled.section`
   margin-top: 4rem;
 
   @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
@@ -90,7 +90,7 @@ export const AboutWrapper = styled.section`
   }
 `;
 
-export const AboutContainer = styled.div`
+export const SectionContent = styled.div`
   padding: ${({ isInverted }) => (isInverted ? '0 2rem 0 0' : '0 0 0 2rem')};
 
   border-left: ${({ isInverted, theme: { colors } }) =>
@@ -135,14 +135,6 @@ export const AboutContainer = styled.div`
       display: none;
     }
   }
-`;
-
-export const AboutContentTitleWrapper = styled.div`
-  display: flex;
-  justify-content: flex-end;
-
-  max-width: 80ch;
-  margin-bottom: 2rem;
 `;
 
 export const InterestsWrapper = styled.div`
@@ -318,27 +310,5 @@ export const RightSkillsContainer = styled.div`
 
   @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
     margin-top: 2rem;
-  }
-`;
-
-export const SkillsGrid = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  /* grid-column-gap: 1rem; */
-  grid-row-gap: 1rem;
-
-  @media all and (${({ theme: { screenSizes } }) => screenSizes.small}) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-`;
-
-export const GridItem = styled.li`
-  display: flex;
-  align-items: center;
-
-  svg {
-    width: 50%;
-    height: auto;
   }
 `;
