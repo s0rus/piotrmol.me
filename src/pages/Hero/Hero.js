@@ -20,12 +20,14 @@ import {
   LeftSkillsContainer,
   RightHeroContainer,
   RightSkillsContainer,
-  SectionContent,
-  SectionWrapper,
   SkillsWrapper,
 } from './Hero.styles';
 import Interests from '../../components/Interests/Interests';
 import { ExternalLink } from '../../components/ExternalLink/ExternalLink';
+import {
+  SectionContent,
+  SectionWrapper,
+} from '../../components/Sections/Sections.styles';
 
 const Hero = () => {
   return (
