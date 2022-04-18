@@ -19,6 +19,10 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
+  a {
+    display: inline-block;
+  }
+
   @media all and (${({ theme: { screenSizes } }) => screenSizes.mobileLarge}) {
     margin-bottom: 1rem;
   }

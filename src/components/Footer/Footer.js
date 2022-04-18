@@ -17,7 +17,7 @@ const Footer = () => {
       <ContentTemplate>
         <Container>
           <Content>
-            <a href='/'>
+            <a href='/' aria-label='Piotr Mól | Hero'>
               <PiotrMolLogo />
             </a>
           </Content>
