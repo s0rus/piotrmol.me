@@ -47,9 +47,15 @@ const Hero = () => {
                   React, I&apos;m trying to master it.
                 </strong>
                 <ContentTitleSubtext>
-                  As of now I really want to take up a job as a(n)
-                  intern/junior. It would really help me grow and solidify my
-                  skills.
+                  As of now I am an intern{' '}
+                  <ExternalLink
+                    href='https://codibly.com/'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    @codibly
+                  </ExternalLink>{' '}
+                  trying to learn as much as possible.
                 </ContentTitleSubtext>
               </ContentTitle>
             </ContentTitleWrapper>
